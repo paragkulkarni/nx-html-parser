@@ -1,0 +1,35 @@
+{
+  "name": "nx-html-parser",
+  "version": "0.0.1",
+  "type": "module",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "rxjs": "^8.0.0",
+    "zone.js": "~0.15.0"
+  },
+
+  "overrides": {
+   "find-cache-directory": "3.3.2",
+    "ng-packagr": {
+      "find-cache-directory": "3.3.2"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "ng-packagr": "~20.0.0",
+    "@angular/build": "~20.0.0",
+    "@nx/angular": "21.6.11"
+  },
+  "targets": {
+  "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+      "project": "libs/nx-html-parser/ng-package.json"
+      }
+    }
+  }
+}

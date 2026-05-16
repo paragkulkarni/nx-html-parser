@@ -1,9 +1,17 @@
 {
-  "name": "@nx-html-parser/source",
+  "name": "nx-html-parser",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build source",
+    "test": "nx test source",
+    "start": "nx serve app-html-parser"
+  },
   "private": true,
+  "author": {
+    "name": "Parag Kulkarni",
+    "email": "parag15363@gmail.com"
+  },
   "dependencies": {
     "@angular/common": "~20.3.0",
     "@angular/compiler": "~20.3.0",
@@ -44,6 +52,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.6.1",
     "jest-util": "^29.7.0",
+    "ng-packagr": "~20.3.0",
     "nx": "21.6.11",
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",

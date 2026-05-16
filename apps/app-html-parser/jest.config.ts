@@ -1,8 +1,8 @@
 export default {
-  displayName: 'app/app-html-parser',
-  preset: '../../../jest.preset.js',
+  displayName: 'app-html-parser',
+  preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/apps/app/app-html-parser',
+  coverageDirectory: '../../../coverage/apps/app-html-parser',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

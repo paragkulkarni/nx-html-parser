@@ -1,0 +1,70 @@
+<div class="parser-container" style="padding: 20px; font-family: sans-serif;">
+  <header>
+    <h1>HTML Security Parser</h1>
+    <p class="description">
+      This tool validates HTML input against <strong>OWASP guidelines</strong>.
+      It ensures that potentially malicious tags are filtered out before rendering.
+    </p>
+  </header>
+
+  <section class="status-box" style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 4px;">
+    <h3>Prohibited Tags</h3>
+    <p>The following tags will trigger a security error (Click to inject):</p>
+    <div class="tag-cloud" style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('script')">script</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('img')">img</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('body')">body</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('a')">a</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('iframe')">iframe</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('svg')">svg</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('object')">object</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('embed')">embed</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('details')">details</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('video')">video</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('audio')">audio</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('source')">source</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('input')">input</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('button')">button</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('textarea')">textarea</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('select')">select</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('link')">link</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('style')">style</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('base')">base</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('form')">form</span>
+      <span class="tag" style="cursor: pointer; background: #eee; padding: 4px 8px; border-radius: 4px;" (click)="injectProhibitedTag('animate')">animate</span>
+    </div>
+  </section>
+
+  <main class="parser-logic">
+    <div class="input-group">
+  <label style="display: block; margin-bottom: 8px;"><strong>Validate HTML Content:</strong></label>
+
+  <div class="code-editor-window">
+    <div class="editor-header">
+      <div class="header-dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <span class="editor-filename">Input HTML</span>
+    </div>
+    <div class="editor-body">
+      <pre><code>{{ htmlContent() }}</code></pre>
+    </div>
+    </div>
+    @if (!errorMessage()) {
+      <div class="parsed-preview-box">
+        <div [innerHTML]="htmlContent()"></div>
+      </div>
+    }
+
+  </div>
+
+  @if (errorMessage()) {
+    <div class="error-box" style="color: #d32f2f; background: #ffebee; border: 1px solid #ffcdd2; padding: 12px; margin-top: 15px; border-radius: 4px; font-weight: bold;">
+      ⚠️ {{ errorMessage() }}
+    </div>
+  }
+  </main>
+</div>
+<router-outlet></router-outlet>

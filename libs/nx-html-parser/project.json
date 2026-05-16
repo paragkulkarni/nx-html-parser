@@ -1,0 +1,41 @@
+{
+  "name": "nx-html-parser",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "/libs/nx-html-parser/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/libs/nx-html-parser"],
+      "options": {
+        "project": "libs/nx-html-parser/ng-package.json",
+        "outputPath": "dist/libs/nx-html-parser",
+        "main": "libs/nx-html-parser/src/index.ts",
+        "tsConfig": "libs/nx-html-parser/tsconfig.lib.json",
+        "assets": ["libs/nx-html-parser/*.md"]
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/nx-html-parser/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/nx-html-parser/tsconfig.lib.json"
+        },
+        "defaultConfiguration": "production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/nx-html-parser/jest.config.ts",
+        "tsConfig": "libs/nx-html-parser/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

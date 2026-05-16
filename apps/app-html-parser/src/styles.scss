@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+/* Target the status box containing the Prohibited Tags */
+.status-box {
+  background-color: #000000; /* Black background */
+  color: #ffffff;            /* White text for the "Prohibited Tags" header so it stays visible */
+  padding: 15px;             /* Optional: Adds space inside the box */
+  border-radius: 4px;        /* Optional: Rounds the corners slightly */
+}
+
+/* Target the span elements inside the tag cloud */
+.status-box .tag-cloud span {
+  color: #ff0000;            /* Red text color for the prohibited tags */
+}
+
+.input-group {
+  margin-top: 20px;
+
+  // Mock Code Window Container
+  .code-editor-window {
+    background-color: #1e1e1e; // VS Code Dark style background
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-bottom: 15px;
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+
+    // Header mimicking Mac/Linux window buttons
+    .editor-header {
+      background-color: #2d2d2d;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #3c3c3c;
+
+      .header-dots {
+        display: flex;
+        gap: 6px;
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+
+          &.red { background-color: #ff5f56; }
+          &.yellow { background-color: #ffbd2e; }
+          &.green { background-color: #27c93f; }
+        }
+      }
+
+      .editor-filename {
+        color: #8c8c8c;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    // Code Body Block
+    .editor-body {
+      padding: 16px;
+      margin: 0;
+      overflow-x: auto;
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      code {
+        color: #9cdcfe; // Soft light-blue color for modern HTML string text
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // Preview target block container styling
+  .parsed-preview-box {
+    padding: 12px;
+    background-color: #fafafa;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    min-height: 40px;
+  }
+}

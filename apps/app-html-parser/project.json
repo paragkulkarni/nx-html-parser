@@ -1,27 +1,27 @@
 {
-  "name": "app/app-html-parser",
+  "name": "app-html-parser",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/app/app-html-parser/src",
+  "sourceRoot": "apps/app-html-parser/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/app/app-html-parser",
-        "browser": "apps/app/app-html-parser/src/main.ts",
+        "outputPath": "dist/apps/app-html-parser",
+        "browser": "apps/app-html-parser/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/app/app-html-parser/tsconfig.app.json",
+        "tsConfig": "apps/app-html-parser/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/app/app-html-parser/public"
+            "input": "apps/app-html-parser/public"
           }
         ],
-        "styles": ["apps/app/app-html-parser/src/styles.scss"]
+        "styles": ["apps/app-html-parser/src/styles.scss"]
       },
       "configurations": {
         "production": {
@@ -52,10 +52,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "app/app-html-parser:build:production"
+          "buildTarget": "app-html-parser:build:production"
         },
         "development": {
-          "buildTarget": "app/app-html-parser:build:development"
+          "buildTarget": "app-html-parser:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "app/app-html-parser:build"
+        "buildTarget": "app-html-parser:build"
       }
     },
     "lint": {
@@ -73,16 +73,16 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/app/app-html-parser/jest.config.ts",
-        "tsConfig": "apps/app/app-html-parser/tsconfig.spec.json"
+        "jestConfig": "apps/app-html-parser/jest.config.ts",
+        "tsConfig": "apps/app-html-parser/tsconfig.spec.json"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "app/app-html-parser:build",
-        "staticFilePath": "dist/apps/app/app-html-parser/browser",
+        "buildTarget": "app-html-parser:build",
+        "staticFilePath": "dist/apps/app-html-parser/browser",
         "spa": true
       }
     }
