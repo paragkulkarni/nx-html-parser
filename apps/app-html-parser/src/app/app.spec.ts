@@ -1,6 +1,6 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { App } from './app';
-import { HtmlParser } from '@nx-html-parser/nx-html-parser';
+import { HtmlParser } from '@nx-all/nx-html-parser';
 
 describe('App', () => {
   let component: App;
