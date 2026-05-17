@@ -12,6 +12,9 @@
     "types": [],
 
   },
+  "files": [
+    "src/index.ts"
+  ],
   "exclude": [
     "src/**/*.spec.ts",
     "src/test-setup.ts",
