@@ -52,7 +52,7 @@ The following HTML tags are blocked and will trigger a security validation error
 ## Installation
 
 ```bash
-npm install --save-dev nx-html-parser
+npm i --save-dev @nx-all/nx-html-parser
 
 ## Usage
 
@@ -68,7 +68,7 @@ import { HtmlParser } from 'nx-html-parser'
 ```ts
 import { Component, inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HtmlParser } from 'nx-html-parser';
+import { HtmlParser } from '@nx-all/nx-html-parser/dist/libs/nx-html-parser/index'
 import { SafeHtml } from '@angular/platform-browser';
 
 @Component({

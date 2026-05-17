@@ -11,6 +11,9 @@
     "module": "preserve",
     "declaration": true,
     "declarationMap": true,
+    "paths": {
+      "@nx-all/nx-html-parser": ["./dist/libs/nx-html-parser/src/index.d.ts"]
+    }
   },
   "angularCompilerOptions": {
     "compilationMode": "partial",
