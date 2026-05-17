@@ -1,6 +1,6 @@
 {
-  "name": "nx-html-parser",
-  "version": "0.0.3",
+  "name": "@nx-html-parser/nx-html-parser",
+  "version": "0.0.1",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
