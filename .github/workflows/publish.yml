@@ -28,10 +28,10 @@ jobs:
         with:
           node-version: '22.14.0'
           # Tells npm to expect an OIDC token instead of a secret token
-          registry-url: 'https://npmjs.org'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps --registry=https://npmjs.org/
+        run: npm ci --legacy-peer-deps
 
       - name: Run build and tests (Recommended for libraries)
         run: |
