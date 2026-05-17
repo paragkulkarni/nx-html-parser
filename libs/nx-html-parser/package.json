@@ -1,7 +1,17 @@
 {
   "name": "@nx-all/nx-html-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
+  "main": "./dist/libs/nx-html-parser/index.js",
+  "module": "./dist/libs/nx-html-parser/index.js",
+  "typings": "./dist/libs/nx-html-parser/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/libs/nx-html-parser/index.d.ts",
+      "import": "./dist/libs/nx-html-parser/index.js",
+      "default": "./dist/libs/nx-html-parser/index.js"
+    }
+  },
   "peerDependencies": {
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0",
