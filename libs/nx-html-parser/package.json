@@ -1,6 +1,6 @@
 {
   "name": "@nx-all/nx-html-parser",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "./fesm2022/nx-all-nx-html-parser.mjs",
   "module": "./fesm2022/nx-all-nx-html-parser.mjs",
