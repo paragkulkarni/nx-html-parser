@@ -40,6 +40,7 @@ jobs:
 
       # 4. Publish to the public registry using the OIDC token
       - name: Publish to npm
+        working-directory: ./dist/libs/nx-html-parser
         run: npm publish --access publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
