@@ -22,7 +22,6 @@ export class App {
   injectProhibitedTag(tag: string) {
     // 1. Instantly overwrite the bound HTML data snippet strings
     const htmlTag = `<${tag}>Prohibited tag block content</${tag}>`;
-    this.htmlContent.set(this.htmlParser(htmlTag))
     this.errorMessage.set(`Security Error: The tag <${tag}> is prohibited by OWASP guidelines.`);
   }
 
