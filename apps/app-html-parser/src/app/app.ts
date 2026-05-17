@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HtmlParser } from '@nx-html-parser';
+import { HtmlParser } from '@nx-all/nx-html-parser';
 import { SafeHtml } from '@angular/platform-browser';
 
 @Component({

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-html-parser": ["libs/nx-html-parser/src/index.ts"]
+      "@nx-all/nx-html-parser": ["libs/nx-html-parser/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
