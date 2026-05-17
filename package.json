@@ -2,8 +2,17 @@
   "name": "@nx-all/nx-html-parser",
   "version": "0.0.3",
   "license": "MIT",
+  "main": "./dist/libs/nx-html-parser/index.js",
+  "typings": "./dist/libs/nx-html-parser/index.d.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/libs/nx-html-parser/index.d.ts",
+      "import": "./dist/libs/nx-html-parser/index.js",
+      "default": "./dist/libs/nx-html-parser/index.js"
+    }
   },
   "files": [
     "dist/",
