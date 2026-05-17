@@ -7,7 +7,10 @@
     "test": "nx test nx-html-parser",
     "start": "nx serve app-html-parser"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paragkulkarni/nx-html-parser.git"
+  },
   "author": {
     "name": "Parag Kulkarni",
     "email": "parag15363@gmail.com"
