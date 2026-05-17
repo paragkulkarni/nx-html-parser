@@ -41,5 +41,3 @@ jobs:
       # 4. Publish to the public registry using the OIDC token
       - name: Publish to npm
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically maps to the OIDC token
