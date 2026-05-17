@@ -1,6 +1,6 @@
 {
   "name": "@nx-all/nx-html-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "peerDependencies": {
     "@angular/common": "^20.0.0",
