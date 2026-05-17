@@ -41,3 +41,5 @@ jobs:
       # 4. Publish to the public registry using the OIDC token
       - name: Publish to npm
         run: npm publish --access publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

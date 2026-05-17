@@ -1,7 +1,10 @@
 {
   "name": "@parag_publish_pkg/nx-html-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "nx build nx-html-parser",
     "test": "nx test nx-html-parser",
