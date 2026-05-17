@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx build source",
-    "test": "nx test source",
+    "build": "nx build nx-html-parser",
+    "test": "nx test nx-html-parser",
     "start": "nx serve app-html-parser"
   },
   "private": true,
