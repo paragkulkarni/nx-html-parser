@@ -2,14 +2,14 @@
   "name": "@nx-all/nx-html-parser",
   "version": "0.0.6",
   "type": "module",
-  "main": "./index.ts",
-  "module": "./index.js",
+  "main": "./fesm2022/nx-all-nx-html-parser.mjs",
+  "module": "./fesm2022/nx-all-nx-html-parser.mjs",
   "typings": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "import": "./index.ts",
-      "default": "./index.ts"
+      "import": "./fesm2022/nx-all-nx-html-parser.mjs",
+      "default": "./fesm2022/nx-all-nx-html-parser.mjs"
     }
   },
   "peerDependencies": {
