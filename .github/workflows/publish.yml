@@ -1,0 +1,45 @@
+name: nx-html-parser
+
+# 1. Trigger only on pushes to the master branch
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: Build and Publish
+    runs-on: ubuntu-latest
+
+    # 2. Match the environment name used in your registry setup
+    environment: production
+
+    # 3. REQUIRED: Grant permission to mint the OIDC token
+    permissions:
+      id-token: write
+      contents: read # Required to checkout public repository code
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+          # Tells npm to expect an OIDC token instead of a secret token
+          registry-url: 'https://npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run build and tests (Recommended for libraries)
+        run: |
+          npm run build --if-present
+          npm test --if-present
+
+      # 4. Publish to the public registry using the OIDC token
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically maps to the OIDC token
