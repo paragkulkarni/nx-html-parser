@@ -59,7 +59,7 @@ npm i --save-dev @nx-all/nx-html-parser
 ### Import the Parser
 
 
-import { HtmlParser } from 'nx-html-parser'
+import { HtmlParser } from '@nx-all/nx-html-parser'
 
 ```
 
